@@ -65,6 +65,26 @@ public class Warmup {
 
     }
 
+    public static String frontBack(String str) {
+        String firstChar = null;
+        String lastChar = null;
+        String middleString = null;
+        String newWord = null;
+        if(str != null && str.length() >= 2) {
+            firstChar = str.substring(0, 1);
+            int lastIndex = str.length();
+            lastChar = str.substring(lastIndex - 1, lastIndex);
+            middleString = str.substring(1, str.length() -1);
+            newWord = lastChar + middleString + firstChar;
+        } else if(str != null && str.length() == 1) {
+            newWord =  str;
+        } else if (str == "") {
+            newWord = "";
+        }
+        return newWord;
+    }
+
+
 
     public static void main(String[] args) {
         System.out.println(sleepIn(false, true));
@@ -76,6 +96,7 @@ public class Warmup {
         System.out.println(notString("good"));
         System.out.println(notString("not bad"));
         System.out.println(missingChar("now", 2));
+        System.out.println(frontBack("Hello"));
 
     }
 }
