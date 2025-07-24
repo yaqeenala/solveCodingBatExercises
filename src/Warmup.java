@@ -47,6 +47,13 @@ public class Warmup {
         return false;
     }
 
+    public static String notString(String str) {
+        if (str.length() >= 3 && str.substring(0, 3).equals("not")) {
+            return str;
+        }
+        return "not " + str;
+    }
+
 
     public static void main(String[] args) {
         System.out.println(sleepIn(false, true));
@@ -55,5 +62,8 @@ public class Warmup {
         System.out.println(makes10(5, 5));
         System.out.println(nearHundred(150));
         System.out.println(posNeg(-5,-3, true));
+        System.out.println(notString("good"));
+        System.out.println(notString("not bad"));
+
     }
 }
