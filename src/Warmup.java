@@ -15,8 +15,20 @@ public class Warmup {
         return false;
     }
 
+    public static int sumDouble(int a, int b) {
+        int sum = 0;
+        if (a != b) {
+            sum = a + b;
+        } else if (a == b) {
+            sum = 2 * (a + b);
+        }
+        return sum;
+    }
+
+
     public static void main(String[] args) {
         System.out.println(sleepIn(false, true));
         System.out.println(monkeyTrouble(false, false));
+        System.out.println(sumDouble(5, 5));
     }
 }
