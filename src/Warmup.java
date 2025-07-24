@@ -40,6 +40,13 @@ public class Warmup {
         return false;
     }
 
+    public static boolean posNeg(int a, int b, boolean negative) {
+        if ((a < 0 && b > 0 && !negative) || (a > 0 && b < 0 && !negative) || (a < 0 && b < 0 && negative)) {
+            return true;
+        }
+        return false;
+    }
+
 
     public static void main(String[] args) {
         System.out.println(sleepIn(false, true));
@@ -47,5 +54,6 @@ public class Warmup {
         System.out.println(sumDouble(5, 5));
         System.out.println(makes10(5, 5));
         System.out.println(nearHundred(150));
+        System.out.println(posNeg(-5,-3, true));
     }
 }
