@@ -106,6 +106,13 @@ public class Warmup {
         return lastChar + str + lastChar;
     }
 
+    public static boolean or35(int n) {
+        if ((n >=0) &&  (n % 3 == 0 || n % 5 == 0)) {
+            return true;
+        }
+        return false;
+    }
+
     public static void main(String[] args) {
         System.out.println(sleepIn(false, true));
         System.out.println(monkeyTrouble(false, false));
@@ -119,6 +126,7 @@ public class Warmup {
         System.out.println(frontBack("Hello"));
         System.out.println(front3("Hello"));
         System.out.println(backAround("Hello"));
+        System.out.println(or35(33));
 
     }
 }
