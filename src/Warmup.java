@@ -33,11 +33,19 @@ public class Warmup {
         return false;
     }
 
+    public static boolean nearHundred(int n) {
+        if ((90 <= n && n <= 110) || (190 <= n && n <= 210)) {
+            return true;
+        }
+        return false;
+    }
+
 
     public static void main(String[] args) {
         System.out.println(sleepIn(false, true));
         System.out.println(monkeyTrouble(false, false));
         System.out.println(sumDouble(5, 5));
         System.out.println(makes10(5, 5));
+        System.out.println(nearHundred(150));
     }
 }
