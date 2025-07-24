@@ -84,7 +84,27 @@ public class Warmup {
         return newWord;
     }
 
+    public static String front3(String str) {
+        String newStr = null;
+        if (str.length() >= 3) {
+            newStr = str.substring(0, 3);
+        } else if (str.length() == 2) {
+            newStr = str.substring(0, 2);
+        } else if (str.length() == 1) {
+            newStr = str.substring(0, 1);
+        } else if (str.length() == 0) {
+            newStr = "";
+        }
+        return newStr + newStr + newStr;
+    }
 
+    public static String backAround(String str) {
+        String lastChar = null;
+        if (str.length() >= 1) {
+            lastChar = str.substring(str.length() - 1, str.length());
+        }
+        return lastChar + str + lastChar;
+    }
 
     public static void main(String[] args) {
         System.out.println(sleepIn(false, true));
@@ -97,6 +117,8 @@ public class Warmup {
         System.out.println(notString("not bad"));
         System.out.println(missingChar("now", 2));
         System.out.println(frontBack("Hello"));
+        System.out.println(front3("Hello"));
+        System.out.println(backAround("Hello"));
 
     }
 }
