@@ -25,10 +25,19 @@ public class Warmup {
         return sum;
     }
 
+    public static boolean makes10(int a, int b) {
+        int c = a + b;
+        if (a == 10 || b == 10 || c == 10){
+            return true;
+        }
+        return false;
+    }
+
 
     public static void main(String[] args) {
         System.out.println(sleepIn(false, true));
         System.out.println(monkeyTrouble(false, false));
         System.out.println(sumDouble(5, 5));
+        System.out.println(makes10(5, 5));
     }
 }
