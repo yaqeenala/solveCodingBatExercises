@@ -54,6 +54,17 @@ public class Warmup {
         return "not " + str;
     }
 
+    public static String missingChar(String str, int n) {
+        String front = null;
+        String back = null;
+        if (str != null && n <= str.length() -1) {
+            front = str.substring(0, n);
+            back = str.substring(n+1, str.length());
+        }
+        return front + back;
+
+    }
+
 
     public static void main(String[] args) {
         System.out.println(sleepIn(false, true));
@@ -64,6 +75,7 @@ public class Warmup {
         System.out.println(posNeg(-5,-3, true));
         System.out.println(notString("good"));
         System.out.println(notString("not bad"));
+        System.out.println(missingChar("now", 2));
 
     }
 }
